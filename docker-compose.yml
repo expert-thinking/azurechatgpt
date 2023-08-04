@@ -12,6 +12,9 @@ services:
       - ARM_SUBSCRIPTION_ID=${ARM_SUBSCRIPTION_ID}
       - ARM_TENANT_ID=${ARM_TENANT_ID}
       - TF_VAR_AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}}
+      - TF_VAR_AUTH_GITHUB_ID=${AUTH_GITHUB_ID}}
+      - TF_VAR_AUTH_GITHUB_SECRET=${AUTH_GITHUB_SECRET}}
+
   tfsec:
     image: tfsec/tfsec
     volumes:

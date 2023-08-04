@@ -28,5 +28,7 @@ resource "azurerm_linux_web_app" "openai" {
     AZURE_OPENAI_API_VERSION         = "2021-08-04-preview"
     NEXTAUTH_SECRET                  = "etnpdopenaitokenunique"
     NEXTAUTH_URL                     = "https://et-npd-openai-wapp.azurewebsites.net"
+    AUTH_GITHUB_ID                   = var.AUTH_GITHUB_ID
+    AUTH_GITHUB_SECRET               = var.AUTH_GITHUB_SECRET
   }
 }
