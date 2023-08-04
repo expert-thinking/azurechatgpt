@@ -74,7 +74,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: et-npd-openai-wapp
+          app-name: https://et-npd-openai-wapp.azurewebsites.net/
           package: ${{ github.workspace }}/Nextjs-site.zip
 
       - name: 🧹 Cleanup
