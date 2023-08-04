@@ -68,7 +68,9 @@ jobs:
           name: Nextjs-site
 
       - name: "Azure Login"
-        run: az login --service-principal -u ${{ secrets.CLIENT_ID }} -p ${{ secrets.CLIENT_SECRET }} -t ${{ secrets.TENANT }}
+        run: |
+          az login --service-principal -u ${{ secrets.CLIENT_ID }} -p ${{ secrets.CLIENT_SECRET }} -t ${{ secrets.TENANT }}
+          az account set -s ${{ secrets.SUBSCRIPTION_ID}}
 
       - name: 🚀 Deploy to Azure Web App
         id: deploy-to-webapp
