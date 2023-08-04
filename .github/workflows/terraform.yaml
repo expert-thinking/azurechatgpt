@@ -20,7 +20,7 @@ jobs:
     if: github.ref != 'refs/heads/main'
     needs: ci
     with:
-      RUNNER_NAME: aks-runner
+      RUNNER_NAME:  ubuntu-latest
       COMMAND: plan
     secrets: 
       ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
